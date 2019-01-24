@@ -21,6 +21,10 @@ var addNewUserToDatabaseAsync = function(user) {
     .then(function(securedUser) {
       return db.createAndSaveUserAsync(securedUser); // Return another promise
     });
+  // .catch((err) => {
+  //   console.log('internal catch');
+  //   throw err;
+  // });
 };
 
 addNewUserToDatabaseAsync({ name: 'Dan', password: 'chickennuggets' })

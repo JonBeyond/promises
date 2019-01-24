@@ -91,6 +91,7 @@ describe('Promisification', function() {
           funnyFile.split('\n').forEach(function(line) {
             expect(line).to.contain('lol');
           });
+
           done();
         })
         .catch(done);
